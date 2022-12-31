@@ -3,7 +3,7 @@ def search(arr,n,x):
          if arr[i] == x:
             return i
     return -1
-
+#This is the where the code start interpreting
 if  __name__ == "__main__":
     arr = [2,4,6,1,7]
     n = len(arr)
