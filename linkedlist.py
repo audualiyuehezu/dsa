@@ -13,11 +13,8 @@ print(linkedlistr.maxlen)
 my_lists = list(range(0,10))
 my_lists.append("here")
 my_lists.insert(1, 10)
-#my_lists.reverse()
-my_lists.remove("here")
-my_lists.sort()
 
-print(my_lists)
+pri
 
 
 
