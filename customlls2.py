@@ -55,13 +55,60 @@ class linkedlist:
             if value == itr.data:
                 print(f"The value is found at index {count} and the value is {itr.data}")
             itr = itr.next
+    
+    def get_length(self):
+        count=0
+        itr = self.head
+        while itr:
+            count+=1
+            itr = itr.next  
+        return count
+    
+    def remove_at(self, index):
+        if index < 0 or  index>= self.get_length():
+            print("The index is out of bound")
+
+        if index == 0:
+            self.head = self.head.next
+
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index - 1 :
+                itr.next = itr.next.next
+                break
+
+            itr = itr.next
+            count += 1
+
+    def remove_by_value(self,data):
+        itr = self.head
+        count = 0
+
+        if itr == data:
+            itr == itr.next
+
+        while itr:
+
+            
+
+            itr = itr.next
+            count +=1
+            
+            
+            
+
+        
 
 
 
 if __name__ == "__main__":
     link = linkedlist()
-    values = link.insert_values(["bannan","tomatoes","mangoes"])
-    
-    link.insert_at_middle(values, "bannan")
+    link.insert_values(["tomatoes","mangoes"])
+    link.Add(4)
     link.print()
+    link.remove_at(1)
+    link.print()
+
+    print(link.get_length())
     

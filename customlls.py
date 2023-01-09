@@ -19,16 +19,14 @@ class linkedlist:
         while node is not None:
             print(node.data)
             node = node.next
-    def Add(self,new):
+    def Add(self,value):
         new_node = Node(new)
         new_node.next = self.head
         self.head = new_node
 
 link = linkedlist()
-elem = Node("php")
 
-link.head = elem
-link.show()
 
 link.Add("c")
+link.Add("value")
 link.show()
